@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,6 +18,9 @@
 }
 
 body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -25,7 +29,20 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
+a{
+  color: inherit;
+  text-decoration: none;
+}
+*{
+  box-sizing: border-box;
+}
+input[type='file'],
+input[type='file']::-webkit-file-upload-button {
+  @apply cursor-pointer focus:outline-none;
+}
+input:focus{
+  box-shadow: none;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

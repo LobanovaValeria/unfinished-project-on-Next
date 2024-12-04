@@ -12,15 +12,27 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": "./app/",
+    "paths": {
+      "@/components/*" :["components/*"],
+      "@/ui/*" :["components/ui/*"],
+      "@/screens/*" :["components/screens/*"],
+
+      "@/hooks/*" :["hooks/*"],
+      "@/shared/*" :["shared/*"],
+      "@/services/*" :["services/*"],
+      "@/store/*" :["store/*"],
+      "@/utils/*" :["utils/*"],
+      "@/assets/*" :["assets/*"],
+
+    },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js"],
   "exclude": ["node_modules"]
 }
